@@ -1,0 +1,137 @@
+
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEAUTY SALON Wendy`s</title>
+    <!-- Incluir Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Estilos CSS aquí */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fce4ec;
+        }
+        header {
+            background-color: #f8bbd0;
+            padding: 20px;
+            text-align: center;
+        animation: fadeIn 3s ease-in-out; /* Fade in animation */
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .logo {
+          animation: slideAndFadeLogo 10s infinite alternate; /* Animación de aparecer y desaparecer */
+        }
+
+@keyframes slideAndFadeLogo {
+    0%, 100% {
+        opacity: 0;
+        transform: translateX(-50px); /* Empieza fuera de la pantalla hacia la izquierda */
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0); /* Aparece en su posición original */
+    }
+}
+        @keyframes fadeIn {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        nav {
+            background-color: #f89ac5;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+           transition: transform 0.3s ease-in-out; /* Animación de enlace de navegación */
+        }
+        nav a:hover {
+            transform: scale(1.1);
+        
+        }
+        footer {
+            background-color: #f89ac5;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            animation: fadeInFooter 8s ease-in-out; /* Animación de aparición durante 5 segundos */
+        }
+          @keyframes fadeInFooter {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+       footer p {
+          margin:0;
+        }
+      footer a {
+            margin: 0 5px;
+            transition: transform 5s ease-in-out; /* Animación de icono de redes sociales */
+        }
+        footer a:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BEAUTY SALON Wendy`s</h1>
+</head>
+<body>
+    <header>
+         <!-- Agrega tu logotipo aquí con una clase para estilizarlo -->
+        <img src="C:\Users\issis\Pictures\salon02.jpg" alt="BEAUTY SALON Wendy`s" class="logo">
+        <nav>
+            <ul>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-home"></i> Inicio</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-images"></i> Galeria</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-user bio-icon">Quienes somos</i>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-calendar-alt"></i>Reservas Online</a>
+        <li><a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-money-check-alt"></i> Pago de servicio</a></li>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-map-marker-alt"></i> Ubicacion</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-user bio-icon">Que asemos</i>
+          </ul>
+      </nav>
+</header>
+
+   <section> 
+        <h2>Bienvenido a nuestro Salón Wendy`s</h2>
+        <p>Ofrecemos una amplia gama de servicios de belleza para ayudarte a lucir y sentirte mejor.</p>
+
+    </section>
+
+    <footer>
+
+       
+  <!-- Agregar icono de redes sociales  -->
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-WhatsApp"></i></a>
+        <p>&copy; 2024 Salón de Wendy`s</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
