@@ -1,0 +1,130 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes somos - Salón de Belleza Wendy's</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Aquí puedes agregar estilos para tu logotipo y otras partes de la página */
+        .logo {
+            width: 100px; /* Ajusta el tamaño según tus necesidades */
+            height: auto;
+        } 
+        .Reservas-online {
+            color: red; /* Cambia el color a tu preferencia */ 
+        }
+        /* Estilos para los iconos en el menú horizontal */
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: purple; /* Cambia el color a morado lila */
+        }
+        /* Estilos para el formulario de reserva */
+        .reservation-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .reservation-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .reservation-form input[type="text"],
+        .reservation-form input[type="email"],
+        .reservation-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .reservation-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .reservation-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        /* Estilos para el fondo de la pantalla */
+        body {
+            background-color: #e6e6fa; /* Morado lila */
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>    <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-home"></i> Inicio</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-images"></i> Galeria</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-user bio-icon">Quienes somos</i>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-calendar-alt"></i>Reservas Online</a>
+        <li><a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-money-check-alt"></i> Pago de servicio</a></li>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-map-marker-alt"></i> Ubicacion</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-user bio-icon">Que asemos</i>
+           </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Bienvenido <span class="Reservas-online">Reservas Online</span> - Salón de Belleza Wendy's</h1>
+            <div>
+                <p><span class="Reservas-online">[Reservas Online]</span></p>
+                <p>Nuestro sistema simplifica el proceso de reserva de tratamientos de belleza y permite a los propietarios de salones administrar sus negocios más fácilmente. El personal tiene sus propios calendarios interactivos donde pueden ver y editar sus horarios.</p>
+            </div>
+        </section>
+
+        <div class="reservation-form">
+            <h2>Reserva tu Cita</h2>
+            <form action="procesar_reserva.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                
+                <label for="servicio">Servicio:</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="">Seleccione el Servicio</option>
+                    <option value="corte">Corte de Cabello</option>
+                    <option value="manicura">Manicura</option>
+                    <option value="pedicura">Pedicura</option>
+                    <option value="otro">Otro</option>
+                    <!-- Agrega más opciones de servicio según tus necesidades -->
+                </select>
+                
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+                
+                <input type="submit" value="Reservar">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Aquí puedes agregar el pie de página si lo deseas -->
+    </footer>
+</body>
+</html>

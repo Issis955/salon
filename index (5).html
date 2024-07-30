@@ -1,0 +1,90 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago de Servicio</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilos CSS para alinear los íconos horizontalmente */
+        body {
+            background-color: #c8a2c8; /* Morado lila */
+            color: white; /* Texto blanco para contrastar */
+        }
+
+        nav ul {
+            display: flex; /* Utilizamos flexbox para alinear los elementos en una fila */
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin-right: 10px; /* Espacio entre los elementos */
+        }
+
+        nav li a {
+            display: inline-flex; /* Para alinear el ícono y el texto en línea */
+            align-items: center; /* Para centrar verticalmente el texto con el ícono */
+            text-decoration: none;
+            color: white; /* Color del texto */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+           <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-home"></i> Inicio</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-images"></i> Galeria</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-user bio-icon">Quienes somos</i>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-calendar-alt"></i>Reservas Online</a>
+        <li><a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-money-check-alt"></i> Pago de servicio</a></li>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-map-marker-alt"></i> Ubicacion</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-user bio-icon">Que asemos</i>
+           </ul>
+        </nav>
+    </header>
+
+    <h2>Pago de Servicio</h2>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        
+        <label for="servicio">Servicio:</label>
+        <select id="servicio" name="servicio" required>
+            <option value="Corte de pelo">Corte de pelo</option>
+            <option value="Manicura">Manicura</option>
+            <option value="Pedicura">Pedicura</option>
+            <option value="otro">otro</option>
+        </select><br><br>
+        
+        <label for="monto">Monto:</label>
+        <input type="number" id="monto" name="monto" required><br><br>
+        
+        <button type="submit">Pagar Ahora</button>
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nombre = $_POST["nombre"];
+        $servicio = $_POST["servicio"];
+        $monto = $_POST["monto"];
+
+        // Aquí deberías incluir la lógica para procesar el pago, como conectar con la API de tu proveedor de pago y realizar la transacción.
+        // Por simplicidad, aquí solo mostraremos los datos recibidos del formulario.
+
+        // Por ejemplo, si estás usando PayPal:
+        // - Debes hacer una solicitud HTTP a la API de PayPal con estos datos.
+        // - Luego, debes verificar la respuesta y tomar medidas según el resultado.
+
+        // Después de procesar el pago, podrías redirigir al usuario a una página de confirmación.
+        // Por ejemplo:
+        // header("Location: pago_exitoso.php");
+        echo "<h3>Gracias por su pago, $nombre.</h3>";
+        echo "<p>Ha pagado $monto por el servicio de $servicio.</p>";
+    }
+    ?>
+
+</body>
+</html>

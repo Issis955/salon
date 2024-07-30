@@ -1,0 +1,136 @@
+
+<html lang="es">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEAUTY SALON Wendy´s</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilo para la barra de navegación */
+        header {
+            background-color: #333;
+            color:  white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: purple;
+            text-decoration: none;
+        }
+
+        /* Estilo para la galería */
+        .gallery-container {
+            overflow-x: scroll; /* Permite el desplazamiento horizontal */
+            white-space: nowrap; /* Hace que los elementos floten en una línea */
+            margin: 20px 0;
+        }
+        .gallery {
+            display: inline-block; /* Hace que los elementos floten en línea */
+            white-space: normal; /* Restaura el comportamiento normal del texto */
+            margin-right: 10px; /* Espacio entre imágenes */
+        }
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+     /* Cambiar el color de la palabra "Pago de servicio" a un tono morado claro */
+        nav ul li a[href*="Pago.html"] {
+            color: #9370DB; /* Código de color para un tono morado claro */
+        }
+
+ </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+         <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-home"></i> Inicio</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-images"></i> Galeria</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-user bio-icon">Quienes somos</i>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-calendar-alt"></i>Reservas Online</a>
+        <li><a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-money-check-alt"></i> Pago de servicio</a></li>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-map-marker-alt"></i> Ubicacion</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-user bio-icon">Que asemos</i>
+         </ul>
+        </nav>   
+  </header>
+
+  <div class="gallery-container">
+        <div class="gallery">
+    <div class="gallery">
+        <img src="C:\Users\issis\Pictures\,1.jpg" alt="Descripción de la imagen 1">
+        <img src="C:\Users\issis\Pictures\wendy.jpg" alt="Descripción de la imagen 2">
+ <img src="C:\Users\issis\Pictures\03.jpg" alt="Descripción de la imagen 3">
+ <img src="C:\Users\issis\Pictures\,2.jpg" alt="Descripción de la imagen 4">
+ <img src="C:\Users\issis\Pictures\,3.jpg" alt="Descripción de la imagen 5">
+ <img src="C:\Users\issis\Pictures\05.jpg" alt="Descripción de la imagen 7">
+ <img src="C:\Users\issis\Pictures\,6.jpg" alt="Descripción de la imagen 8">
+ <img src="C:\Users\issis\Pictures\,7.jpg" alt="Descripción de la imagen 9">
+ <img src="C:\Users\issis\Pictures\KÇ.jpg" alt="Descripción de la imagen 10">
+ <img src="C:\Users\issis\Pictures\.3.jpg" alt="Descripción de la imagen 11">
+ <img src="C:\Users\issis\Pictures\X.jpg" alt="Descripción de la imagen 12">
+ <img src="C:\Users\issis\Pictures\.2.jpg" alt="Descripción de la imagen 13">
+ <img src="C:\Users\issis\Pictures\V.jpg" alt="Descripción de la imagen 14">
+ <img src="C:\Users\issis\Pictures\M.jpg" alt="Descripción de la imagen 15">
+ <img src="C:\Users\issis\Pictures\G.jpg" alt="Descripción de la imagen 16">
+ <img src="C:\Users\issis\Pictures\L.jpg" alt="Descripción de la imagen 17">
+ <img src="C:\Users\issis\Pictures\L5.jpg" alt="Descripción de la imagen 18">
+ <img src="C:\Users\issis\Pictures\P.jpg" alt="Descripción de la imagen 19">
+ <img src="C:\Users\issis\Pictures\O.jpg" alt="Descripción de la imagen 20">
+ <img src="C:\Users\issis\Pictures\I0.jpg" alt="Descripción de la imagen 21">
+ <img src="C:\Users\issis\Pictures\02.jpg" alt="Descripción de la imagen 22">
+ <img src="C:\Users\issis\Pictures\06.jpg" alt="Descripción de la imagen 23">
+ <img src="C:\Users\issis\Pictures\04.jpg" alt="Descripción de la imagen 24">
+ <img src="C:\Users\issis\Pictures\01.jpg" alt="Descripción de la imagen 25">
+        <!-- Agrega más imágenes con la misma estructura -->       
+        </div>
+    </div>
+<div class="lightbox">
+        <img src="" alt="Imagen en lightbox">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.gallery img');
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = document.querySelector('.lightbox img');
+
+        images.forEach(image => {
+ image.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = image.src;
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    </script>
+</body>
+</Html>

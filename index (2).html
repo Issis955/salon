@@ -1,0 +1,88 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicacion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Agrega el enlace para Font Awesome -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: thistle; /* Cambia el color aquí */
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0; /* Elimina el margen */
+            display: flex; /* Muestra los elementos en línea */
+            justify-content: center; /* Centra los elementos horizontalmente */
+        }
+        nav ul li {
+            /* Elimina display: inline; */
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: purple;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #map { 
+            height: 400px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+             <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-home"></i> Inicio</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-images"></i> Galeria</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-user bio-icon">Quienes somos</i>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-calendar-alt"></i>Reservas Online</a>
+        <li><a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-money-check-alt"></i> Pago de servicio</a></li>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-map-marker-alt"></i> Ubicacion</a>
+        <a href="file:///C:/Users/issis/Desktop/index.html"><i class="fas fa-user bio-icon">Que asemos</i>
+          </ul>
+        </nav>
+    </header>
+
+    <h1>Mi Ubicación</h1>
+    <div id="map"></div>
+
+    <!-- Incluye la biblioteca de Leaflet y tu código JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Inicializa el mapa con las nuevas coordenadas de tu ubicación
+        var map = L.map('map').setView([15.044122, -87.958853], 13); // Coordenadas de tu ubicación
+
+        // Añade una capa de mapa base (puedes usar diferentes proveedores de mapas)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Añade un marcador en la nueva ubicación
+        L.marker([15.044122, -87.958853]).addTo(map)
+            .bindPopup('¡Hola! Este es tu marcador.')
+            .openPopup();
+    </script>
+</body>
+</html>
